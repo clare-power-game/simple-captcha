@@ -139,7 +139,8 @@ module SimpleCaptcha #:nodoc
           when 'numeric' then
             SimpleCaptcha.length.times{value << (48 + rand(10)).chr}
           else
-            SimpleCaptcha.length.times{value << (65 + rand(26)).chr}
+            # SimpleCaptcha.length.times{value << (65 + rand(26)).chr}
+            SimpleCaptcha.length.times{value << (48 + rand(10)).chr}
         end
 
         return value
